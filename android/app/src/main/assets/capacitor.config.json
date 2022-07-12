@@ -1,0 +1,6 @@
+{
+	"appId": "dev.legalmente.gas",
+	"appName": "Gas",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

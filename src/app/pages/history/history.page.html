@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-card *ngIf="( tracing$ |async ); let tracing">
+    <ion-list lines="full" *ngFor="let item of tracing">
+      <ion-item>
+        <ion-icon color="tertiary" name="pulse-outline" slot="start"></ion-icon>
+        <ion-label>
+          <p>Empezó: {{ item?.startDate | date:'medium' }}</p>
+          <p>Finalizó: {{ (item?.endingDate | date:'medium') ?? 'No finaliza'}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+    <ion-card  *ngIf="( tracing$ |async )?.length == 0">
+      <ion-item lines="none">
+        <ion-icon color="tertiary" name="pulse-outline" slot="start"></ion-icon>
+        <ion-label>
+          <p>Sin historial</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "458044389066",
+    "firebase_url": "https://detector-de-gas-esp32-default-rtdb.firebaseio.com",
+    "project_id": "detector-de-gas-esp32",
+    "storage_bucket": "detector-de-gas-esp32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458044389066:android:d6f444578d4ce7d2726633",
+        "android_client_info": {
+          "package_name": "dev.legalmente.gas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458044389066-srk612in4cl1pq9usramp4g5etu0hel0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyCtXa50dC5Ag4lziJh4eZ60dmkjtoe84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458044389066-srk612in4cl1pq9usramp4g5etu0hel0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
