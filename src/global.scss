@@ -32,3 +32,8 @@ ion-content {
 ion-tab-button {
     --color-selected: var(--ion-color-tertiary);
 }
+
+ion-spinner {
+    width: 3em;
+    height: 3em;
+}
