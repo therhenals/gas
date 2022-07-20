@@ -1,3 +1,24 @@
 ion-item:last-child {
     --border-width: 0;
 }
+
+ion-modal {
+    --width: 290px;
+    --height: 382px;
+    --border-radius: 16px;
+    ion-content {
+        --background: transparent;
+    }
+}
+
+ion-modal ion-datetime {
+    height: 382px;
+    --background: #fff1f2;
+    --background-rgb: 255, 241, 242;
+    border-radius: 16px;
+    box-shadow: rgba(var(--ion-color-tertiary-rgb), 0.3) 0px 10px 15px -3px;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
