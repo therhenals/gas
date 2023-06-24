@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:458044389066:android:d6f444578d4ce7d2726633",
+        "mobilesdk_app_id": "1:458044389066:android:53b27163e7d386fa726633",
         "android_client_info": {
-          "package_name": "dev.legalmente.gas"
+          "package_name": "dev.luisbytes.gas"
         }
       },
       "oauth_client": [

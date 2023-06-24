@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { collection, collectionData, Firestore, limitToLast, orderBy, query } from '@angular/fire/firestore';
-import { SplashScreen } from '@capacitor/splash-screen';
 import { of, Observable } from 'rxjs';
 import { concatMap } from 'rxjs/operators';
 import { DrainModel } from '../../models/drain.model';
@@ -12,18 +11,15 @@ import { DrainModel } from '../../models/drain.model';
 })
 export class HomePage implements OnInit {
 
-  lastDrain$: Observable<DrainModel>;
-  drain: boolean;
+  lastDrain$?: Observable<DrainModel>;
+  drain?: boolean;
   firestore: Firestore;
-
 
   constructor(firestore: Firestore) {
     this.firestore = firestore;
   }
 
   async ngOnInit() {
-    await SplashScreen.hide();
-
     const q = query(
       collection(this.firestore, 'tracing'),
       orderBy('startDate', 'asc'),
@@ -60,6 +56,11 @@ export class HomePage implements OnInit {
       return {
         color: 'danger',
         message: 'Alto'
+      };
+    } else {
+      return {
+        color: 'success',
+        message: 'Normal'
       };
     }
   }

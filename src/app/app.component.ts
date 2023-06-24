@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Capacitor } from '@capacitor/core';
 import { StatusBar } from '@capacitor/status-bar';
 import { PushNotifications } from '@capacitor/push-notifications';
@@ -11,9 +10,7 @@ import { FCM } from '@capacitor-community/fcm';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor() {
-
-  }
+  constructor() { }
 
   async ngOnInit() {
     if (Capacitor.isNativePlatform()) {

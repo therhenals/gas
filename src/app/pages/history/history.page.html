@@ -1,59 +1,56 @@
 <ion-content>
   <ion-card class="pt-0">
-    <ion-accordion-group>
-      <ion-accordion>
+    <ion-accordion-group mode="ios">
+      <ion-accordion mode="ios">
         <ion-item slot="header" color="light">
           <ion-icon name="calendar-outline" color="tertiary" slot="start"></ion-icon>
           <ion-label>Filtrar por fecha</ion-label>
         </ion-item>
         <ion-list lines="full" slot="content">
-          <ion-item id="startDate">
+          <ion-item>
             <ion-icon color="tertiary" name="return-down-forward-outline" slot="start"></ion-icon>
-            <ion-label>Desde: {{startDate | date:'dd/MM/yy'}}</ion-label>
+            <ion-label> Desde: </ion-label>
+            <ion-datetime-button datetime="startDate"></ion-datetime-button>
           </ion-item>
 
-          <ion-item id="endDate">
+          <ion-item>
             <ion-icon color="tertiary" name="return-down-back-outline" slot="start"></ion-icon>
-            <ion-label>Hasta: {{endDate | date:'dd/MM/yy'}}</ion-label>
+            <ion-label> Hasta: </ion-label>
+            <ion-datetime-button datetime="endDate"></ion-datetime-button>
           </ion-item>
 
           <ion-item (click)="filter()" lines="none">
             <ion-label>
-            <ion-button color="tertiary" expand="block">
-              Filtrar
-            </ion-button>
-          </ion-label>
+              <ion-button color="tertiary" expand="block">
+                Filtrar
+              </ion-button>
+            </ion-label>
           </ion-item>
         </ion-list>
       </ion-accordion>
     </ion-accordion-group>
   </ion-card>
 
-  <ion-modal [backdropDismiss]="false" trigger="startDate">
+  <ion-modal mode="ios" [keepContentsMounted]="true">
     <ng-template>
-      <ion-content>
-        <ion-datetime [max]="maxDate" [(ngModel)]="startDate" show-default-buttons="true" done-text="Seleccionar" cancel-text="Cancelar"
-          locale="es-CO" mode="ios" presentation="date">
-          <span slot="title">Selecciona la primera fecha del filtro</span>
-        </ion-datetime>
-      </ion-content>
+      <ion-datetime id="startDate" [max]="maxDate" [(ngModel)]="startDate" show-default-buttons="true"
+        done-text="Seleccionar" cancel-text="Cancelar" locale="es-CO" mode="ios" presentation="date">
+        <span slot="title">Selecciona la primera fecha del filtro</span>
+      </ion-datetime>
     </ng-template>
   </ion-modal>
 
-  <ion-modal [backdropDismiss]="false" trigger="endDate">
+  <ion-modal mode="ios" [keepContentsMounted]="true">
     <ng-template>
-      <ion-content>
-        <ion-datetime [min]="startDate" [max]="maxDate" [(ngModel)]="endDate" show-default-buttons="true" done-text="Seleccionar" cancel-text="Cancelar"
-          locale="es-CO" mode="ios" presentation="date">
-          <span slot="title">Selecciona la ultima fecha del filtro</span>
-        </ion-datetime>
-      </ion-content>
+      <ion-datetime id="endDate" [min]="startDate" [max]="maxDate" [(ngModel)]="endDate" show-default-buttons="true"
+        done-text="Seleccionar" cancel-text="Cancelar" locale="es-CO" mode="ios" presentation="date">
+        <span slot="title">Selecciona la ultima fecha del filtro</span>
+      </ion-datetime>
     </ng-template>
   </ion-modal>
-
 
   <ion-card *ngIf="( tracing$ |async ) as tracing; else loading">
-    <ion-list *ngIf="tracing?.length > 0" lines="full">
+    <ion-list *ngIf="tracing.length > 0" lines="full">
       <ion-item *ngFor="let item of tracing">
         <ion-icon color="tertiary" name="pulse-outline" slot="start"></ion-icon>
         <ion-label>
@@ -63,7 +60,7 @@
       </ion-item>
     </ion-list>
 
-    <ion-item *ngIf="tracing?.length == 0" lines="none">
+    <ion-item *ngIf="tracing?.length === 0" lines="none">
       <ion-icon color="tertiary" name="pulse-outline" slot="start"></ion-icon>
       <ion-label>
         <p>Sin historial</p>

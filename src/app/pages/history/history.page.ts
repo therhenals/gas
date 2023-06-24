@@ -20,7 +20,7 @@ export class HistoryPage implements OnInit {
 
   endDate = this.maxDate;
 
-  tracing$: Observable<DrainModel[]>;
+  tracing$?: Observable<DrainModel[]>;
 
   constructor(firestore: Firestore) {
     this.firestore = firestore;

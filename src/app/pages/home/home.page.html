@@ -1,6 +1,6 @@
 <ion-content>
   <div class="content">
-    <ng-container *ngIf="lastDrain$|async as item; else loading" lines="none">
+    <ng-container *ngIf="lastDrain$ | async as item; else loading" lines="none">
 
       <ng-container *ngIf="drain; else not">
         <ion-icon class="main" [color]="getStatus(item.value).color" name="skull-outline"></ion-icon>

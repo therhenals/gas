@@ -1,4 +1,4 @@
-package dev.legalmente.gas;
+package dev.luisbytes.gas;
 
 import com.getcapacitor.BridgeActivity;
 

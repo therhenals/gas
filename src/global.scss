@@ -10,30 +10,30 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import "@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
 
 ion-content {
-    --background: linear-gradient(180deg, var(--ion-color-tertiary) 0%, #FFFFFF 40.5%);
+  --background: linear-gradient(180deg, var(--ion-color-tertiary) 0%, #FFFFFF 40.5%);
 }
 
 ion-tab-button {
-    --color-selected: var(--ion-color-tertiary);
+  --color-selected: var(--ion-color-tertiary);
 }
 
 ion-spinner {
-    width: 3em;
-    height: 3em;
+  width: 3em;
+  height: 3em;
 }
