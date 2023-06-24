@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { Capacitor } from '@capacitor/core';
 import { StatusBar } from '@capacitor/status-bar';
 import { PushNotifications } from '@capacitor/push-notifications';
-import { FCM } from "@capacitor-community/fcm";
+import { FCM } from '@capacitor-community/fcm';
 
 @Component({
   selector: 'app-root',

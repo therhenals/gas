@@ -27,7 +27,7 @@ export class HistoryPage implements OnInit {
   }
 
   ngOnInit() {
-    this.filter()
+    this.filter();
   }
 
   filter() {

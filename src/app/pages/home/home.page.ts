@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { collection, collectionData, Firestore, limitToLast, orderBy, query } from '@angular/fire/firestore';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { of, Observable } from 'rxjs';
-import { concatMap, tap } from 'rxjs/operators'
+import { concatMap } from 'rxjs/operators';
 import { DrainModel } from '../../models/drain.model';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -41,21 +42,21 @@ export class HomePage implements OnInit {
         }
         return of(doc);
       })
-    )
+    );
   }
 
   getStatus(status: number) {
-    if (status == 0) {
+    if (status === 0) {
       return {
         color: 'low',
         message: 'Bajo'
       };
-    } else if (status == 1) {
+    } else if (status === 1) {
       return {
         color: 'warning',
         message: 'Medio'
       };
-    } else if (status == 2) {
+    } else if (status === 2) {
       return {
         color: 'danger',
         message: 'Alto'
